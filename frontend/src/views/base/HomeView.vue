@@ -58,6 +58,7 @@
 <script>
 import { mapState } from "pinia"
 import { useAccountsStore } from "@/stores/accountsStore"
+import planejaViagem from "@/api/planeja_viagem"
 
 export default {
   data: () => ({
@@ -70,10 +71,7 @@ export default {
         'Quente',
         'Frio',
       ],
-      tiposDestino: [
-        'Nacional',
-        'Internacional'
-      ],
+      tiposDestino: [],
       tiposDeTurismo: [
         'Aventura',
         'Lazer',
@@ -88,7 +86,14 @@ export default {
   methods: {
       async PesquisaDestino () {
         console.log("Tem nada aqui ainda meu amiguinho")
+      },
+      async buscaDestinos() {
+        this.tiposDestino = await planejaViagem.buscaDestinos()
+        console.log(this.tiposDestino)
       }
     },
+  mounted() {
+    this.buscaDestinos()
+  },
 }
 </script>
