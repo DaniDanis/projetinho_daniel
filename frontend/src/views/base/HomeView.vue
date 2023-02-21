@@ -88,8 +88,9 @@ export default {
         console.log("Tem nada aqui ainda meu amiguinho")
       },
       async buscaDestinos() {
-        this.tiposDestino = await planejaViagem.buscaDestinos()
-        console.log(this.tiposDestino)
+        await planejaViagem.buscaDestinos().then((data) => {
+          this.tiposDestino = data.destinos
+        })
       }
     },
   mounted() {
