@@ -38,7 +38,7 @@ app.get("/api/tasks/list", tasks.find);
 app.post("/api/tasks/add", tasks.add);
 
 // VIAGENS
-app.get("/api/destinos/list", destinos.list);
+app.post("/api/destinos/list", destinos.list);
 
 app.listen(PORT, () => {
   console.log(

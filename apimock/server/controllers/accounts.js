@@ -29,7 +29,6 @@ module.exports = {
     sleep(800).then(() => {
       let user = getUser(username);
       if (!user || !password) {
-        console.log("3");
         res.status(200).end();
         return;
       }

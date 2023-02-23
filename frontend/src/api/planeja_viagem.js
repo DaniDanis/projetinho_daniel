@@ -1,10 +1,12 @@
 import api from "./config.js"
+import apiHelpers from "./helpers.js"
+
 
 export default {
-  buscaDestinos: () => {
+  buscaDestinos: (description) => {
     return new Promise((resolve, reject) => {
       api
-        .get("/api/destinos/list")
+        .post("/api/destinos/list", description)
         .then((response) => {
           return resolve(response.data)
         })

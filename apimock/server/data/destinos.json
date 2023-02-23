@@ -1,8 +1,29 @@
 [
     {
       "id": 1,
-      "description": "Estudar Vuetify",
-      "done": false,
-      "userId": 1
+      "destino": "Praia de Copacabana",
+      "clima": "Quente",
+      "tipoDestino": "Nacional",
+      "tipoTurismo": "Lazer"
+    },
+    {
+      "id": 2,
+      "destino": "Trilha Serra do Mar",
+      "clima": "Quente",
+      "tipoDestino": "Nacional",
+      "tipoTurismo": "Aventura"
+    },
+    {
+      "id": 3,
+      "destino": "Cidade de São Paulo",
+      "clima": "Quente",
+      "tipoDestino": "Nacional",
+      "tipoTurismo": "Négocios"
+    },{
+      "id": 4,
+      "destino": "LollaPaluza",
+      "clima": "Quente",
+      "tipoDestino": "Nacional",
+      "tipoTurismo": "Eventos"
     }
 ]

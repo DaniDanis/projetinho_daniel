@@ -72,7 +72,6 @@ export default {
     ...mapState(useAccountsStore, ["loggedUser"]),
   },
   mounted() {
-    console.log(this.loggedUser)
     AccountsApi.whoami().then((response) => {
       if (response.authenticated) {
         this.saveLoggedUser(response.user)
@@ -102,12 +101,10 @@ export default {
       if (user) {
         this.accountsStore.setLoggedUser(user)
         this.visible = false
-        console.log("logged")
       }
     },
     showTasks() {
       this.$router.push({ name: "tasks-list" })
-      console.log("--> tasks")
     },
   },
 }

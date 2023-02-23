@@ -16,7 +16,6 @@
           v-model="tiposTurismo"
           :items="tiposDeTurismo"
           label="Seu tipo de turismo preferido <3"
-          multiple
           chips
           required
         ></v-select>
@@ -24,7 +23,6 @@
           v-model="destinos"
           :items="tiposDestino"
           label="Tipo de viagem"
-          multiple
           chips
           required
         ></v-select>
@@ -32,7 +30,6 @@
           v-model="climas"
           :items="tiposDeClima"
           label="Clima de preferência"
-          multiple
           chips
           required
         ></v-select>
@@ -71,7 +68,10 @@ export default {
         'Quente',
         'Frio',
       ],
-      tiposDestino: [],
+      tiposDestino: [
+        'Nacional',
+        'Internacional'
+      ],
       tiposDeTurismo: [
         'Aventura',
         'Lazer',
@@ -85,16 +85,17 @@ export default {
   },
   methods: {
       async PesquisaDestino () {
-        console.log("Tem nada aqui ainda meu amiguinho")
-      },
-      async buscaDestinos() {
-        await planejaViagem.buscaDestinos().then((data) => {
-          this.tiposDestino = data.destinos
+        const formDestinos = {
+          nome: this.nome,
+          clima: this.climas,
+          tipoDestino: this.destinos,
+          tipoTurismo: this.tiposTurismo
+        }
+        console.log(formDestinos.nome)
+        await planejaViagem.buscaDestinos(formDestinos).then((data) => {
+          // this.tiposDestino = data.destinos
         })
       }
     },
-  mounted() {
-    this.buscaDestinos()
-  },
 }
 </script>
