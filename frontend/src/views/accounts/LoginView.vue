@@ -76,7 +76,6 @@ export default {
       if (response.authenticated) {
         this.saveLoggedUser(response.user)
         this.appStore.showSnackbar("Usuário já logado", "warning")
-        this.showTasks()
       }
     })
   },
@@ -90,7 +89,6 @@ export default {
             return
           }
           this.saveLoggedUser(response.user)
-          this.showTasks()
         })
         .finally(() => {
           this.loading = false
@@ -102,10 +100,7 @@ export default {
         this.accountsStore.setLoggedUser(user)
         this.visible = false
       }
-    },
-    showTasks() {
-      this.$router.push({ name: "tasks-list" })
-    },
+    }
   },
 }
 </script>

@@ -6,7 +6,6 @@ const cookieParser = require("cookie-parser");
 
 const base = require("./controllers/base");
 const accounts = require("./controllers/accounts");
-const tasks = require("./controllers/tasks");
 const destinos = require("./controllers/destinos")
 
 const YELLOW = "\x1b[33m%s\x1b[0m";
@@ -32,10 +31,6 @@ app.get("dapau", base.dapau);
 app.post("/api/accounts/login", accounts.login);
 app.post("/api/accounts/logout", accounts.logout);
 app.get("/api/accounts/whoami", accounts.whoami);
-
-// TASKS
-app.get("/api/tasks/list", tasks.find);
-app.post("/api/tasks/add", tasks.add);
 
 // VIAGENS
 app.post("/api/destinos/list", destinos.list);
