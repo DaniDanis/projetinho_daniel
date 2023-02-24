@@ -55,7 +55,6 @@ THIRD_PARTY_APPS = [
 LOCAL_APPS = [
     "projetinho_daniel.base",
     "projetinho_daniel.accounts",
-    "projetinho_daniel.tasks",
 ]
 
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
