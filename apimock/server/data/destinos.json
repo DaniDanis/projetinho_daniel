@@ -10,7 +10,7 @@
     {
       "id": 2,
       "destino": "Trilha Serra do Mar",
-      "img": "",
+      "img": "https://www.icmbio.gov.br/parnaserradosorgaos/images/stories/Alto_da_Ventania__Fred_Rodrigues.JPG",
       "clima": "Quente",
       "tipoDestino": "Nacional",
       "tipoTurismo": "Aventura"
@@ -18,14 +18,14 @@
     {
       "id": 3,
       "destino": "Cidade de São Paulo",
-      "img": "",
+      "img": "https://images.alphacoders.com/581/581842.jpg",
       "clima": "Quente",
       "tipoDestino": "Nacional",
       "tipoTurismo": "Négocios"
     },{
       "id": 4,
       "destino": "LollaPalooza",
-      "img": "",
+      "img": "https://popnow.com.br/wp-content/uploads/2021/02/What-Else-Mag-Cultura-Musica-13-Artistas-Bandas-Lollapalooza-Brasil-2018-Cover.jpg",
       "clima": "Quente",
       "tipoDestino": "Nacional",
       "tipoTurismo": "Eventos"
