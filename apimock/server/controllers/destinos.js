@@ -20,9 +20,9 @@ module.exports = {
         ranking ++
       }
       if (ranking == 3) {
-        destinosPerfeitos.push(destino.destino)
+        destinosPerfeitos.push(destino)
       } else {
-        destinosAlternativos.push(destino.destino)
+        destinosAlternativos.push(destino)
       }
     }
     const response = {

@@ -4,6 +4,10 @@
     v-if="!temDestinos"
     @pesquisar="PesquisaDestino"
     ></form-destinos>
+    <exibe-destinos 
+    v-else
+    :destinos="destinos"
+    ></exibe-destinos>
   </v-container>
 </template>
 
@@ -13,16 +17,16 @@ import { useAccountsStore } from "@/stores/accountsStore"
 import planejaViagem from "@/api/planeja_viagem"
 import FormDestinos from "@/components/FormDestinos.vue"
 import { useAppStore } from "@/stores/appStore"
+import ExibeDestinos from "@/components/ExibeDestinos.vue"
 
 export default {
   setup() {
     const appStore = useAppStore()
     return { appStore }
   },
-  components: { FormDestinos },
+  components: { FormDestinos, ExibeDestinos },
   data: () => ({
-    destinosPerfeitos: [],
-    destinosAlternativos: [],
+    destinos: [],
     temDestinos: false,
   }),
   computed: {
@@ -32,10 +36,11 @@ export default {
       async PesquisaDestino (formDestinos) {
         console.log(formDestinos.nome)
         await planejaViagem.buscaDestinos(formDestinos).then((data) => {
-          this.destinosPerfeitos = data.destinosPerfeitos
-          this.destinosAlternativos = data.destinosAlternativos
+          this.destinos = data
         })
-        if (this.destinosPerfeitos.length > 0 || this.destinosAlternativos.length > 0) {
+        const destinosPerfeitos = this.destinos.destinosPerfeitos
+        const destinosAlternativos = this.destinos.destinosAlternativos
+        if ((destinosPerfeitos.length > 0) || (destinosAlternativos.length > 0)) {
           this.temDestinos = true
         } else {
           this.appStore.setShowErrorMessage(`Ainda não temos destinos para as opções selecionadas`)
