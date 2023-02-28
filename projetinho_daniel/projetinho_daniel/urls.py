@@ -21,4 +21,5 @@ urlpatterns = [
     # path('explorer/', include('explorer.urls')),
     path("api/", include("projetinho_daniel.base.urls")),
     path("api/accounts/", include("projetinho_daniel.accounts.urls")),
+    path("api/destinos/", include("destinos.urls"))
 ]
