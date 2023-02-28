@@ -58,10 +58,35 @@
 <script>
 import { mapState } from "pinia"
 import { useAccountsStore } from "@/stores/accountsStore"
+import AccountsApi from "@/api/accounts.api.js"
+import { useAppStore } from "@/stores/appStore"
+
+
 
 export default {
+  setup() {
+    const appStore = useAppStore()
+    const accountsStore = useAccountsStore()
+    return { appStore, accountsStore }
+  },
   computed: {
     ...mapState(useAccountsStore, ["loggedUser"]),
   },
+  mounted() {
+    AccountsApi.whoami().then((response) => {
+      if (response.authenticated) {
+        this.saveLoggedUser(response.user)
+      }
+    })
+  },
+  methods: {
+    saveLoggedUser(user) {
+      this.error = !user
+      if (user) {
+        this.accountsStore.setLoggedUser(user)
+        this.visible = false
+      }
+    }
+  }
 }
 </script>
