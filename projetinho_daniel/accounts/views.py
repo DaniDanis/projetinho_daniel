@@ -14,7 +14,7 @@ def login(request):
     if user is not None:
         if user.is_active:
             auth.login(request, user)
-            log_svc.log_login(request.user)
+            # log_svc.log_login(request.user)
             user_dict = _user2dict(user)
     return JsonResponse(user_dict, safe=False)
 
@@ -22,8 +22,8 @@ def login(request):
 def logout(request):
     if request.method.lower() != "post":
         raise Exception("Logout only via post")
-    if request.user.is_authenticated:
-        log_svc.log_logout(request.user)
+    # if request.user.is_authenticated:
+    #     log_svc.log_logout(request.user)
     auth.logout(request)
     return JsonResponse({})
 
