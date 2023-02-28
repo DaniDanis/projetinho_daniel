@@ -17,7 +17,7 @@
           </div>
         </v-col>
         <v-col cols="12" align-self="center" class="pa-0 text-center">
-          <span> &copy; {{ new Date().getFullYear() }} - Djàvue Template </span>
+          <span> &copy; {{ new Date().getFullYear() }} - Dani Viagens </span>
         </v-col>
       </v-row>
     </v-container>

@@ -1,5 +1,15 @@
 <template>
     <div class="listaDestinos">
+        <v-btn
+            class="my-2"
+            block
+            size="large"
+            rounded="pill"
+            color="primary"
+            variant="outlined"
+            @click="fechaDestinos"
+            >Início
+        </v-btn>
         <div v-for="destinoPerfeito in destinosPerfeitos" :key="destinoPerfeito.id">
             <v-card
               class="mx-auto"
@@ -46,16 +56,21 @@
 </template>
 
 <script>
+
 export default {
     props: {
-        destinos: [],
+        destinos: {},
     },
     data: () => ({
         destinosPerfeitos: [],
         destinosAlternativos: [],
         show: false,
     }),
-    methods: {},
+    methods: {
+        fechaDestinos() {
+            this.$emit("fechaDestinos")
+        }
+    },
     mounted() {
         this.destinosPerfeitos = this.destinos.destinosPerfeitos
         this.destinosAlternativos = this.destinos.destinosAlternativos

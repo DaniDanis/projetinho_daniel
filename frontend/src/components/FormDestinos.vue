@@ -51,7 +51,14 @@
   </template>
   
   <script>
+
   export default {
+    props: {
+      user: {
+      type: Object,
+      default: null,
+    },
+    },
     data: () => ({
         valid: true,
         nome: '',
@@ -82,9 +89,11 @@
                 tipoDestino: this.destinos,
                 tipoTurismo: this.tiposTurismo
                 }
-            console.log("Pesquisando...")
             this.$emit('pesquisar', formDestinos);
         }
+    },
+    mounted() {
+      this.nome = this.user.username
     }
     }
   </script>

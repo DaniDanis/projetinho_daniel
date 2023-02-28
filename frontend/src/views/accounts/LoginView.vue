@@ -91,6 +91,8 @@ export default {
           this.saveLoggedUser(response.user)
         })
         .finally(() => {
+          this.appStore.showSnackbar("Login efetuado com sucesso!", "success")
+          this.$router.push({ name: 'base-home' });
           this.loading = false
         })
     },
