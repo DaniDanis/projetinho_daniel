@@ -1,33 +1,32 @@
 const data = require("../data");
-const accounts = require("./accounts");
 
 
 module.exports = {
   list: (req, res) => {
     const form = req.body
-    const destinos = data.destinos.filter((t) => t.tipoDestino == form.tipoDestino || t.clima == form.clima || t.tipoTurismo == form.tipoTurismo)
-    const destinosAlternativos = []
-    const destinosPerfeitos = []
+    const destinos = data.atrativos.filter((t) => t.tipo_destino == form.tipo_destino || t.clima == form.clima || t.tipo_turismo == form.tipo_turismo)
+    const destinos_alternativos = []
+    const destinos_perfeitos = []
     for (const destino of destinos) {
       let ranking = 0
-      if (destino.tipoDestino == form.tipoDestino) {
+      if (destino.tipo_destino == form.tipo_destino) {
         ranking ++
       }
       if (destino.clima == form.clima) {
         ranking ++
       }
-      if (destino.tipoTurismo == form.tipoTurismo) {
+      if (destino.tipo_turismo == form.tipo_turismo) {
         ranking ++
       }
-      if (ranking == 3) {
-        destinosPerfeitos.push(destino)
+      if (ranking == 2) {
+        destinos_perfeitos.push(destino)
       } else {
-        destinosAlternativos.push(destino)
+        destinos_alternativos.push(destino)
       }
     }
     const response = {
-      destinosPerfeitos: destinosPerfeitos,
-      destinosAlternativos: destinosAlternativos
+      destinos_perfeitos: destinos_perfeitos,
+      destinos_alternativos: destinos_alternativos
     }
     res.send(response)
   }

@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "nome": "Brasil",
+    "tipo_destino": "Nacional"
+  },
+  {
+    "id": 2,
+    "nome": "Argentina",
+    "tipo_destino": "Internacional"
+  },
+  {
+    "id": 3,
+    "nome": "Coreia do Sul",
+    "tipo_destino": "Internacional"
+  },
+  {
+    "id": 4,
+    "nome": "Estados Unidos da America",
+    "tipo_destino": "Internacional"
+  }
+]

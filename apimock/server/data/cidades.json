@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "nome": "São Paulo",
+    "pais_id": 1
+  },
+  {
+    "id": 2,
+    "nome": "Rio de Janeiro",
+    "pais_id": 1
+  },
+  {
+    "id": 3,
+    "nome": "Buenos Aires",
+    "pais_id": 2
+  },
+  {
+    "id": 4,
+    "nome": "Bariloche",
+    "pais_id": 2
+  },
+  {
+    "id": 5,
+    "nome": "Seul",
+    "pais_id": 3
+  },
+  {
+    "id": 6,
+    "nome": "Jeju",
+    "pais_id": 3
+  },
+  {
+    "id": 7,
+    "nome": "Nova Iorque",
+    "pais_id": 4
+  },
+  {
+    "id": 8,
+    "nome": "Miami",
+    "pais_id": 4
+  }
+]

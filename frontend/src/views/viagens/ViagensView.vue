@@ -52,8 +52,8 @@ export default {
         await planejaViagem.buscaDestinos(formDestinos).then((data) => {
           this.destinos = data
         })
-        const destinosPerfeitos = this.destinos.destinosPerfeitos
-        const destinosAlternativos = this.destinos.destinosAlternativos
+        const destinosPerfeitos = this.destinos.destinos_perfeitos
+        const destinosAlternativos = this.destinos.destinos_alternativos
         if ((destinosPerfeitos.length > 0) || (destinosAlternativos.length > 0)) {
           this.visible = false
         } else {

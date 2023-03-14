@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "nome": "Praia de Copacabana",
+    "imagem": "https://images6.alphacoders.com/335/335480.jpg",
+    "clima": "Quente",
+    "tipo_turismo": "Lazer"
+  },
+  {
+    "id": 2,
+    "nome": "Trilha Serra do Mar",
+    "imagem": "https://www.icmbio.gov.br/parnaserradosorgaos/images/stories/Alto_da_Ventania__Fred_Rodrigues.JPG",
+    "clima": "Quente",
+    "tipo_turismo": "Aventura"
+  },
+  {
+    "id": 3,
+    "nome": "Cidade de São Paulo",
+    "imagem": "https://images.alphacoders.com/581/581842.jpg",
+    "clima": "Quente",
+    "tipo_turismo": "Négocios"
+  },
+  {
+    "id": 4,
+    "nome": "LollaPalooza",
+    "imagem": "https://popnow.com.br/wp-content/uploads/2021/02/What-Else-Mag-Cultura-Musica-13-Artistas-Bandas-Lollapalooza-Brasil-2018-Cover.jpg",
+    "clima": "Quente",
+    "tipo_turismo": "Eventos"
+  }
+]

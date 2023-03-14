@@ -15,18 +15,17 @@
               class="mx-auto"
               max-width="1000"
             >
-                <v-card-title>Uma opção de viagem perfeita para você é {{destinoPerfeito.destino}}</v-card-title>
+                <v-card-title>Uma opção de destino perfeito para você é {{destinoPerfeito.nome}}</v-card-title>
                 <v-img
                     class="align-end text-white"
                     height="400"
-                    :alt="'Imagem do destino ' + destinoPerfeito.destino"
-                    :src="destinoPerfeito.img"
+                    :alt="'Imagem do destino ' + destinoPerfeito.nome"
+                    :src="destinoPerfeito.imagem"
                     cover
                 ></v-img>        
-                <v-card-subtitle class="pt-4">{{destinoPerfeito.destino}}</v-card-subtitle>          
+                <v-card-subtitle class="pt-4">{{destinoPerfeito.nome}}</v-card-subtitle>          
                 <v-card-text>
                     <div>O clima desse destino é {{ destinoPerfeito.clima }}</div>          
-                    <div>E é uma viagem {{ destinoPerfeito.tipoDestino }}</div>
                 </v-card-text>          
             </v-card>
         </div>
@@ -35,18 +34,17 @@
               class="mx-auto"
               max-width="1000"
             >
-                <v-card-title>Uma opção de viagem alternativa para você é {{destinoAlternativo.destino}}</v-card-title>
+                <v-card-title>Uma opção de destino alternativo para você é {{destinoAlternativo.nome}}</v-card-title>
                 <v-img
                 class="align-end text-white"
                 height="400"
-                :alt="'Imagem do destino ' + destinoAlternativo.destino"
-                :src="destinoAlternativo.img"
+                :alt="'Imagem do destino ' + destinoAlternativo.nome"
+                :src="destinoAlternativo.imagem"
                 cover
                 ></v-img>
-                <v-card-subtitle class="pt-4">{{ destinoAlternativo.destino }}</v-card-subtitle>
+                <v-card-subtitle class="pt-4">{{ destinoAlternativo.nome }}</v-card-subtitle>
                 <v-card-text>
                     <div>O clima desse destino é {{ destinoAlternativo.clima }}</div>            
-                    <div>E é uma viagem {{ destinoAlternativo.tipoDestino }}</div>
                 </v-card-text>          
             </v-card>
         </div>
@@ -72,8 +70,8 @@ export default {
         }
     },
     mounted() {
-        this.destinosPerfeitos = this.destinos.destinosPerfeitos
-        this.destinosAlternativos = this.destinos.destinosAlternativos
+        this.destinosPerfeitos = this.destinos.destinos_perfeitos
+        this.destinosAlternativos = this.destinos.destinos_alternativos
     }
     }
 </script>

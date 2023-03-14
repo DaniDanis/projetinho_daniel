@@ -19,13 +19,6 @@
             required
           ></v-select>
           <v-select
-            v-model="destinos"
-            :items="tiposDestino"
-            label="Tipo de viagem"
-            chips
-            required
-          ></v-select>
-          <v-select
             v-model="climas"
             :items="tiposDeClima"
             label="Clima de preferência"
@@ -69,10 +62,6 @@
           'Quente',
           'Frio',
         ],
-        tiposDestino: [
-          'Nacional',
-          'Internacional'
-        ],
         tiposDeTurismo: [
           'Aventura',
           'Lazer',
@@ -86,8 +75,8 @@
             const formDestinos = {
                 nome: this.nome,
                 clima: this.climas,
-                tipoDestino: this.destinos,
-                tipoTurismo: this.tiposTurismo
+                tipo_destino: this.destinos,
+                tipo_turismo: this.tiposTurismo
                 }
             this.$emit('pesquisar', formDestinos);
         }
